@@ -20,7 +20,7 @@ cargo build --target wasm32-unknown-unknown --release
 
 ## Compile to DF
 
-With the WASM binary from `/target/wasm32-unkown-unknown/release/dfwasm_example_project.wasm`, you can execute the `dfwasm` compiler:
+With the WASM binary from `/target/wasm32-unknown-unknown/release/dfwasm_example_project.wasm`, you can execute the `dfwasm` compiler:
 
 ```bash
 dfwasm dfwasm_example_project.wasm --code-client # or --link for non-code-client
