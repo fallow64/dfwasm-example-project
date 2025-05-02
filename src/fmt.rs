@@ -50,7 +50,7 @@ macro_rules! print {
         $(
             $arg.df_format_write(&mut output).unwrap();
         )*
-        $crate::df::print_string(output.as_str());
+        $crate::df::putstr(output.as_str());
     }};
 }
 

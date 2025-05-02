@@ -121,11 +121,14 @@ pub extern "C" fn main() {
     loop {
         let start_time = df::millis();
         grid.print();
+        let print_time = df::millis();
         grid.tick();
         let end_time = df::millis();
 
-        let elapsed_time = end_time - start_time;
-        println!("Elapsed time: ", elapsed_time, " ms");
+        let print_duration = print_time - start_time;
+        let tick_duration = end_time - print_time;
+        println!("Print time: ", print_duration, "ms");
+        println!("Update time: ", tick_duration, "ms");
         df::wait(1000);
     }
 }
